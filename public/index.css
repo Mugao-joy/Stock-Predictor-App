@@ -139,7 +139,6 @@ input[type="text"] {
     font-size: 105%;
 }
 
-/* ticker display (ensure comma separated) */
 
 .ticker {
     margin: 0 .1em;
@@ -161,11 +160,47 @@ footer {
     text-align: center;
 }
 
-/* stop ugly scroll bar on some browsers */
 .output-panel p::-webkit-scrollbar {
     display: none;
 }
 
 .output-panel p::-moz-scrollbar {
     display: none;
+}.output-panel.visible {
+  display: flex;
+}
+#report-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  box-sizing: border-box;
+}
+
+.output-panel {
+  width: 90%;
+  max-width: 600px;
+  padding: 1em;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  display: none;
+  flex-direction: column;
+}
+
+.output-panel.visible {
+  display: flex;
+}
+
+.output-panel .report-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.output-panel pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  font-family: inherit;
 }
